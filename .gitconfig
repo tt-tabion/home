@@ -1,0 +1,18 @@
+[user]
+	name = Anthony Tabion
+	email = anthony.tabion@tradingtechnologies.com
+[core]
+	editor = emacs
+[alias]
+    glog = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    myglog = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --author=\"YOUR NAME\"
+    cpu = "!f() { git checkout $1 && git pull && git submodule update; }; f"
+    pu = "!f() { git pull && git submodule update; }; f"
+    st = status
+    co = checkout
+    br = branch
+    rb = "!f() { git push origin :$1 && git branch -D $1; }; f"
+
+[color]
+	diff = true
+	log = true
