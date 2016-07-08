@@ -1,0 +1,39 @@
+#!/bin/bash
+
+git checkout --quiet develop
+git pull --quiet
+git branch | grep "\*"
+git submodule update --quiet
+cd ext
+git glog | grep -m 1 4.1.0
+cd ..
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+
+git checkout --quiet release/current
+git pull --quiet
+git branch | grep "\*"
+git submodule update --quiet
+cd ext
+git glog | grep -m 1 4.1.0
+cd ..
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+
+git checkout --quiet uat/current
+git pull --quiet
+git branch | grep "\*"
+git submodule update --quiet
+cd ext
+git glog | grep -m 1 4.1.0
+cd ..
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+
+git checkout --quiet master
+git pull --quiet
+git branch | grep "\*"
+git submodule update --quiet
+cd ext
+git glog | grep -m 1 4.1.0
+cd ..
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+
+
