@@ -22,7 +22,7 @@
     cod = git cpu develop
     
     mergeup    = "!f() { git cpu master && git cpu uat/current && git merge master && git cpu release/current && git merge uat/current && git cpu develop && git merge release/current; }; f"
-    pushall    = "!f() { git cpu master && git push origin master && git cpu uat/current && git push origin uat/currenet && git cpu release/current && git push origin release/current && git cpu develop && git push origin develop; }; f"
+    pushall    = "!f() { git cpu master && git push origin master && git cpu uat/current && git push origin uat/current && git cpu release/current && git push origin release/current && git cpu develop && git push origin develop; }; f"
     restoreall = "!f() { git cpu master && git reset --hard origin/master; }; f"
     refresh    = "!f() { git pull && git submodule update; }; f"
     
