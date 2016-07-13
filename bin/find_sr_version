@@ -7,7 +7,8 @@ git submodule update --quiet
 cd ext
 git glog | grep -m 1 4.1.0
 cd ..
-find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "server\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/pds_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "collector\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
 
 git checkout --quiet release/current
 git pull --quiet
@@ -16,7 +17,8 @@ git submodule update --quiet
 cd ext
 git glog | grep -m 1 4.1.0
 cd ..
-find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "server\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/pds_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "collector\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
 
 git checkout --quiet uat/current
 git pull --quiet
@@ -25,7 +27,8 @@ git submodule update --quiet
 cd ext
 git glog | grep -m 1 4.1.0
 cd ..
-find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "server\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/pds_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "collector\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
 
 git checkout --quiet master
 git pull --quiet
@@ -34,6 +37,8 @@ git submodule update --quiet
 cd ext
 git glog | grep -m 1 4.1.0
 cd ..
-find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/md_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "server\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+find deploy/chef/cookbooks/pds_*/attributes/ -name "debesys_repo_hash.rb" -exec grep default {} \; | egrep "collector\"|btec|cfe|cme|eex|espeed|eris|eurex|ice|kcg|ndaq|nfx"
+
 
 
