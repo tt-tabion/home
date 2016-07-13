@@ -1,0 +1,3 @@
+#!/bin/bash
+
+knife "$@" -c /home/atabion/.chef/knife.external.rb

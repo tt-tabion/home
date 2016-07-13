@@ -1,0 +1,3 @@
+#!/bin/bash
+
+mount -t cifs //172.17.250.39/Share -o username=atabion,password=atun1010 /mnt/crashes

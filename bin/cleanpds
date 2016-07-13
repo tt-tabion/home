@@ -1,0 +1,35 @@
+#!/bin/bash
+
+if [ "$1" == "test" ] 
+then 
+    server=http://pds-test.elasticbeanstalk.com/ 
+elif [ "$1" == "int-dev-cert" ] 
+then 
+    server=https://api-int-dev-cert.trade.tt/pds/
+elif [ "$1" == "int-dev-sim" ]
+then 
+    server=https://api-int-dev-sim.trade.tt/pds/
+elif [ "$1" == "int-stage-cert" ]
+then 
+    server=https://pds-int-stage-cert.debesys.net/
+elif [ "$1" == "int-stage-sim" ]
+then 
+    server=https://pds-int-stage-sim.debesys.net/
+elif [ "$1" == "ext-prod-live" ]
+then
+    server=https://api-ext-prod-live.trade.tt/pds/
+else 
+    echo "$0 [test|int-dev-cert|int-dev-sim] token market timestamp"
+    exit 0
+fi
+
+
+# Get the token from chrome (trade-dev.trade.tt) console; control+shift+j
+token=$2
+
+market=$3
+
+# Run the command without the timestamp and the server will respond with a timestamp.
+timestamp=$4
+
+curl -X DELETE -H "Authorization: Bearer $token" -H "Content-Type: application/json" -m 9999 "$server/api/1/maint/markets?id=$market&type=perm&verificationTime=$timestamp"

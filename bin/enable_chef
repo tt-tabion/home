@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+   echo "usage: $0 [host]"
+   exit 0
+fi
+
+echo "enabling chef on $1"
+
+knife ssh -a ipaddress "name:$1" "sudo rm /usr/bin/chef-client; sudo ln -s /opt/chef/bin/chef-client /usr/bin/chef-client"
+
+
+

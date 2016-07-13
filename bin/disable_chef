@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+   echo "usage: $0 [host]"
+   exit 0
+fi
+
+echo "disabling chef on $1"
+
+knife ssh -a ipaddress "name:$1" 'sudo rm /usr/bin/chef-client && sudo echo -e "#! /bin/bash\n\necho\necho Sorry! \necho Chef deployments have been temporarily disabled on this host, please\necho contact the deployment team for questions, deployment@tradingtechnologies.com,\necho or check Slack.\necho chef client failed" > /tmp/chef-client && sudo ln -s /tmp/chef-client /usr/bin/chef-client && sudo chmod a+x /usr/bin/chef-client'
+
+

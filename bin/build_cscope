@@ -1,0 +1,4 @@
+#!/bin/bash
+
+find . -regex ".*\.\b\(c\|cc\|cpp\|h\|hh\|hpp\|inl\|proto\|mk\|vcxproj\)\b" > ${PWD##*/}.SOURCELIST
+cscope -i ${PWD##*/}.SOURCELIST -b -v

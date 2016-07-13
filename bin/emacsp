@@ -1,0 +1,5 @@
+#!/bin/sh
+
+TMP=$(mktemp)
+cat > $TMP
+emacs $TMP
