@@ -3,6 +3,9 @@
 	email = anthony.tabion@tradingtechnologies.com
 [core]
 	editor = emacs
+    packedGitLimit = 512m
+    packedGitWindowSize = 512m
+    bigFileThreshold = 256m
 [alias]
     glog = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     myglog = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --author=\"YOUR NAME\"
@@ -13,6 +16,23 @@
     br = branch
     rb = "!f() { git push origin :$1 && git branch -D $1; }; f"
 
+    com = git cpu master
+    cou = git cpu uat/current
+    cor = git cpu release/current
+    cod = git cpu develop
+    
+    mergeup    = "!f() { git cpu master && git cpu uat/current && git merge master && git cpu release/current && git merge uat/current && git cpu develop && git merge release/current; }; f"
+    pushall    = "!f() { git cpu master && git push origin master && git cpu uat/current && git push origin uat/currenet && git cpu release/current && git push origin release/current && git cpu develop && git push origin develop; }; f"
+    restoreall = "!f() { git cpu master && git reset --hard origin/master; }; f"
+    refresh    = "!f() { git pull && git submodule update; }; f"
+    
 [color]
 	diff = true
 	log = true
+[gc]
+    auto = 0
+[pack]
+    deltaCacheSize = 256m
+    windowMemory = 256m
+	threads = 4
+
