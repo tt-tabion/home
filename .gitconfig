@@ -25,7 +25,7 @@
     pushall    = "!f() { git cpu master && git push origin master && git cpu uat/current && git push origin uat/current && git cpu release/current && git push origin release/current && git cpu develop && git push origin develop; }; f"
     restoreall = "!f() { git cpu master && git reset --hard origin/master; }; f"
     refresh    = "!f() { git pull && git submodule update; }; f"
-    
+    test       = "!f() { git checkout $1 && git submodule ext; }; f"    
 [color]
 	diff = true
 	log = true

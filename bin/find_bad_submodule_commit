@@ -1,0 +1,30 @@
+#!/bin/bash
+
+USAGE="USAGE: $0 start_hash end_hash
+       Find the needle in the haystack.  Who broke the submoule?
+       Walk though hash list and dumps the ext version"
+
+for arg in $@; do 
+    if [[ $arg == "-h" || $arg == "--help" ]]; then
+        echo "$USAGE"
+        exit 0
+    fi
+done
+
+if [ $# -ne 2 ];
+then
+    echo -e "ERROR: supply two valid hashes.  Aborting..." >&2
+    echo ""
+    echo "$USAGE"
+    exit 1
+fi
+
+OUTPUT="/tmp/commits.out.$RANDOM"
+
+git log --oneline --pretty=format:"%h" $1 $2 > $OUTPUT
+
+while read hash; do
+    git ls-tree $hash ext | echo "$hash" $1
+done < $OUTPUT
+
+rm $OUTPUT
