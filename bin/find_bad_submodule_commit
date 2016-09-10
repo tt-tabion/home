@@ -21,10 +21,11 @@ fi
 
 OUTPUT="/tmp/commits.out.$RANDOM"
 
-git log --oneline --pretty=format:"%h" $1 $2 > $OUTPUT
+git log --oneline --first-parent --pretty=format:"%h" $1...$2^ > $OUTPUT
+echo "" >> $OUTPUT
 
 while read hash; do
-    git ls-tree $hash ext | echo "$hash" $1
+    git ls-tree $hash ext | xargs -e echo "$hash"
 done < $OUTPUT
 
 rm $OUTPUT
