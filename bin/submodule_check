@@ -1,6 +1,6 @@
 #!/bin/bash
 
-USAGE="USAGE: $0 start_hash end_hash
+USAGE="USAGE: $0 start_hash end_hash submodule
        Find the needle in the haystack.  Who broke the submoule?
        Walk though hash list and dumps the ext version"
 
@@ -11,9 +11,9 @@ for arg in $@; do
     fi
 done
 
-if [ $# -ne 2 ];
+if [ $# -ne 3 ];
 then
-    echo -e "ERROR: supply two valid hashes.  Aborting..." >&2
+    echo -e "ERROR: Missin arguments.  Aborting..." >&2
     echo ""
     echo "$USAGE"
     exit 1
@@ -25,7 +25,7 @@ git log --oneline --first-parent --pretty=format:"%h" $1...$2^ > $OUTPUT
 echo "" >> $OUTPUT
 
 while read hash; do
-    git ls-tree $hash ext | xargs -e echo "$hash"
+    git ls-tree $hash $3 | xargs -e echo "$hash"
 done < $OUTPUT
 
 rm $OUTPUT
