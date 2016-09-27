@@ -8,7 +8,7 @@
 # hlsearch on (H) or off (h):
 ~H
 # Last Search Pattern:
-~MSle0~/Expi
+~MSle0~/o
 
 # Last Substitute Search Pattern:
 ~MSle0&de883ee
@@ -18,94 +18,65 @@ $
 
 # Command Line History (newest to oldest):
 :q!
-:q
+:wq
 :Q!
-:0
-:!
+:q
+:se ic
+:se if
+:q!:q!
 :q1
+: 22
+::q
+:se ic 
+:0
+:Q
+:
+:$
+:.,.+1514/151
+:se cl
+:Se ic
+:Q1
+:!
 :oooo:q!
 :se cursorline
-:se cl
 :highlight
 :.!
-:wq
 :'<,'>
-:%s/de883ee/51b5230/g
-:CAP
-:Wq
-:547
-:se ic 
-:se ic
-:w
-:126
-:Q
-:$
-:w ~/chef_sfuff
-:!w /home/atabion/chef.stuff
-:aqw
-://pds-test.elasticbeanstalk.com/
-:aQ
-:'<,'>q
-:String
-:a
-:.,.+44q
-:09
-:Q1
-:.q!
-:)
-:/admin_mgr_por
 
 # Search String History (newest to oldest):
-? ^\d\{3}ÿ
-?/Expi
-?/dr
-?/dirs
-?/connection_file
-?/STK
-?/data_center
-?/priority
-?/NDAQ
-?/mdserver
-?/priority_list
-?/md_ser
-?/server_priority
-?/CME_
-?/CME
-?/exchange_vlan
-?/exchange_info
-?/CME_1
-?/NDAQ_
-?/vlan2401ICE_L                                                                                                                                 
-?/vlan2402
-?/vlan2042
-?/vlan2401
-?/ice
-?/md_feed_intfc
-?/md_feed_
-?/new_york
-?/node
-?/node.data_center.name
-?/admin_mgr_port
-?/mdserver:
-?/ice:
-?/md_feed_infc
+?/o
+?/7X_SeriesContractSymbol
+?/eurex
+?/eex
 ?/md_server
-?/"ice"
-?/2401
-?/vlan
-?/port
-?/9151
-?/md_
-?/9155
-?/9154
-?/9153
-?/9152
-?/adin_mgr_port
-?/ipaddress
-?/5029
-?/all_md
-?/juno
-? de883ee
+?/5136109
+?/BTEC
+?/BO14
+?/BTEC14
+?/no_
+?/normal
+?/mdserver
+?/mdserver_
+?/md_server_exchange
+?/cpu
+? ^\d\{3}ÿ
+?/EUROPEAN
+?/EUROPEAN CARBON
+?/term
+?/Send
+?/Sending
+?/O1BY
+?/priority
+?/cme
+?/dc
+?/primary_data_centers
+?/data_center
+?/glados-a
+?/CPU
+??cmp
+?/cme_1
+?/md_cfe
+?/CME
 
 # Expression History (newest to oldest):
 
@@ -114,50 +85,203 @@ $
 # Input Line History (newest to oldest):
 
 # Registers:
-""0	CHAR	0
-	348
-<H,symbol=CS5TC_CAL18_C14000, LS=100, TS=0.000000e+00, ISN=NONK00357123, CUR=USD, SRN=467448, InstrType=11, TickRules=-50000.00000-250000.00000:0.01000, BoardLot=0, ContractSize=0, NominalValue=0.010000, PriceDecimals=2, UnderlyingProductType=17, NumDecimalsStrikePrice=2, Symbol=CS5TC_CAL18_C14000, LotSize=100, ExchangeSymbol=CS5TC_CAL18_C14000
+"0	LINE	0
+	
 "1	LINE	0
 	
-"2	LINE	0
-	
-"3	LINE	0
-	
+"2	CHAR	0
+	md_server
+	    comment:  
+	    home:     /
+	    name:     md_cme_sunday_restart
+	    path:     /sbin:/bin:/usr/sbin:/usr/bin
+	    shell:    /bin/bash
+	    timezone: America/Chicago
+	    
+	    command:  0 10 * * 0 root initctl restart md_cme
+	    comment:  
+	    home:     /
+	    name:     md_cme_sunday_restart
+	    path:     /sbin:/bin:/usr/sbin:/usr/bin
+	    shell:    /bin/bash
+	    timezone: America/Chicago
+	data_center:
+	  all_markets:
+	    TT_MARKET_ID_ASX
+	    TT_MARKET_ID_BANK_ALGO
+	    TT_MARKET_ID_BROKER_MATCH
+	    TT_MARKET_ID_BTEC
+	    TT_MARKET_ID_BVMF
+	    TT_MARKET_ID_CFE
+	    TT_MARKET_ID_CME
+	    TT_MARKET_ID_DIRECTMATCH
+	    TT_MARKET_ID_EEX
+	    TT_MARKET_ID_ERIS
+	    TT_MARKET_ID_ESPEED
+	    TT_MARKET_ID_EUREX
+	    TT_MARKET_ID_EURONEXT
+	    TT_MARKET_ID_FEX
+	    TT_MARKET_ID_FIX_GW
+	    TT_MARKET_ID_GMEX
+	    TT_MARKET_ID_HKEX
+	    TT_MARKET_ID_ICE
+	    TT_MARKET_ID_ICE_L
+	    TT_MARKET_ID_KCG
+	    TT_MARKET_ID_LME
+	    TT_MARKET_ID_LSE
+	    TT_MARKET_ID_MEFF
+	    TT_MARKET_ID_MX
+	    TT_MARKET_ID_NDAQ_EU
+	    TT_MARKET_ID_NFX
+	    TT_MARKET_ID_NLX
+	    TT_MARKET_ID_OSE
+	    TT_MARKET_ID_SGX
+	    TT_MARKET_ID_TFX
+	    TT_MARKET_ID_TOCOM
+	    TT_MARKET_ID_INVALID
+	  all_markets_short_name:
+"3	CHAR	0
+	include_in_price_farm:    true
+	      
 "4	LINE	0
 	
 "5	LINE	0
-	      source:              DELTA4
-	    M5:
-	      contract_name_range: 0-9
-	      source:              DELTA5
-	  use-inplace-optimization: true
+	
 "6	LINE	0
-	    "recipe[md_eex"
-"7	LINE	0
-	    CME_3
-	  priority:  HA
+	  exchanges:
+	    NDAQC
+	    NDAQD
+	  priority:
+	    NDAQC: P
+	    NDAQD: P
+	  record:    true
+	splunk:
+	  start_splunk_forwarder: true
+	tags:
+	  NDAQC
+	  NDAQD
+	zookeeper_ensemble: 10.192.1.46:2181,10.192.1.56:2181,10.192.1.66:2181
+	
+	Default Attributes:
+	abrt:
+	  cookbook_hash: 28854b04f1c500d187387168d6e8e79f0573aedc
+	admin_api:
+	  token_key: token-int.pub
+	base:
+	  cookbook_hash: 1dad223f2dd6bfbf5052c634635ff92c78285b06
+	  globals:
+	    currency_rate_refresh_time: 05:30:00
+	build-essential:
+	  compile_time: false
+	chef_client:
+	  backup_path:    /var/lib/chef
+	  bin:            /usr/bin/chef-client
+	  cache_path:     /var/cache/chef
+	  conf_dir:       /etc/chef
+"7	CHAR	0
+	exchanges:
+	    NDAQC
+	    NDAQD
+	  priority:
+	    NDAQC: HA
+	    NDAQD: HA
+	splunk:
+	  start_splunk_forwarder: true
+	tags:
+	  NDAQC
+	  NDAQD
+	zookeeper_ensemble: 10.192.1.46:2181,10.192.1.56:2181,10.192.1.66:2181
+	
+	Default Attributes:
+	abrt:
+	  cookbook_hash: 28854b04f1c500d187387168d6e8e79f0573aedc
+	admin_api:
+	  token_key: token-int.pub
+	base:
+	  cookbook_hash: 1dad223f2dd6bfbf5052c634635ff92c78285b06
+	  globals:
+	    currency_rate_refresh_time: 05:30:00
+	build-essential:
+	  compile_time: false
+	chef_client:
+	  backup_path:    /var/lib/chef
+	  bin:            /usr/bin/chef-client
+	  cache_path:     /var/cache/chef
+	  conf_dir:       /etc/chef
+	  config:
+	    chef_server_url:        https://api.opscode.com/organizations/debesys
+	    log_level:              info
+	    log_location:           "/var/log/chef/chef-client.log"
+	    node_name:              false
+	    validation_client_name: debesys-validator
+	    verify_api_cert:        true
+	  cron:
+	    environment_variables: 
+	    hour:                  */4
+	    log_file:              /dev/null
+	    mailto:                
+	    minute:                0
+	    path:                  
+	    use_cron_d:            false
+	  daemon_options:
+	  init_style:     init
+	  interval:       1800
+	  load_gems:
+	  log_dir:        /var/log/chef
+	  log_file:       
 "8	LINE	0
-	FQDN:        gla0srv100.pi.domain
-	IP:          10.192.0.100
+	
 "9	LINE	0
 	
-"-	CHAR	0
-	348
-<H,symbol=CS5TC_CAL18_C14000, LS=100, TS=0.000000e+00, ISN=NONK00357123, CUR=USD, SRN=467448, InstrType=11, TickRules=-50000.00000-250000.00000:0.01000, BoardLot=0, ContractSize=0, NominalValue=0.010000, PriceDecimals=2, UnderlyingProductType=17, NumDecimalsStrikePrice=2, Symbol=CS5TC_CAL18_C14000, LotSize=100, ExchangeSymbol=CS5TC_CAL18_C14000
+""-	CHAR	0
+	&type=perm&verificationTime=$timestamp"
 
 # File marks:
-'0  3  3  ~/src/tt/debesys/testfile
-'1  1  0  ~/src/tt/debesys/testfile
-'2  8  0  ~/src/tt/debesys/test
-'3  24  0  ~/src/tt/debesys/test
-'4  40  0  ~/src/tt/debesys/test
-'5  56  0  ~/src/tt/debesys/test
-'6  1  0  ~/src/tt/debesys/all_messages/source/tt/messaging/pds_collector/service.proto
-'7  1  0  ~/.chef/knife.rb
-'8  20  0  /tmp/build_issue/build.mk
-'9  1  0  ~/cookbooks_to_bumip
+'0  1  0  ~/breakpoints
+'1  35  131  ~/bin/cleanpds
+'2  31  0  ~/.bash_profile
+'3  1  0  ~/.bashpr
+'4  1  0  ~/.bashrc
+'5  151  6  ~/src/tt/debesys/price_server/exchange/fa_ps/source/fa_fix_messages.xml
+'6  32  0  ~/src/tt/debesys/makefile
+'7  14  0  ~/src/tt.patch/debesys/test
+'8  10  0  ~/bin/find_sr_version
+'9  1  1  ~/src/sr/tradingtech-smds-4.1.0.13p26/env-absolute.sh
 
 # Jumplist (newest first):
+-'  1  0  ~/breakpoints
+-'  35  131  ~/bin/cleanpds
+-'  1  0  ~/bin/cleanpds
+-'  31  0  ~/.bash_profile
+-'  30  0  ~/.bash_profile
+-'  1  0  ~/.bashpr
+-'  1  0  ~/.bashrc
+-'  151  6  ~/src/tt/debesys/price_server/exchange/fa_ps/source/fa_fix_messages.xml
+-'  1  0  ~/src/tt/debesys/price_server/exchange/fa_ps/source/fa_fix_messages.xml
+-'  32  0  ~/src/tt/debesys/makefile
+-'  1  0  ~/src/tt/debesys/makefile
+-'  14  0  ~/src/tt.patch/debesys/test
+-'  8  0  ~/src/tt.patch/debesys/test
+-'  1  0  ~/src/tt.patch/debesys/test
+-'  10  0  ~/bin/find_sr_version
+-'  1  0  ~/bin/find_sr_version
+-'  1  1  ~/src/sr/tradingtech-smds-4.1.0.13p26/env-absolute.sh
+-'  8  0  ~/src/java/jdk-8u91-linux-x64.tar.gz
+-'  4  0  ~/src/java/jdk-8u91-linux-x64.tar.gz
+-'  1  14  ~/.bash_profile
+-'  3  4  ~/.bash_profile
+-'  1  17  ~/inproc/pds_ndaq_eu_shared.inproc.conf
+-'  97  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+-'  1  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+-'  161  19  ~/md_server.list
+-'  1  0  ~/md_server.list
+-'  54  4  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/Readme.md
+-'  1  0  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/Readme.md
+-'  41  3  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/ps_messages.xml
+-'  1  0  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/ps_messages.xml
+-'  1  0  ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
+-'  8  0  ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
+-'  4  0  ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
 -'  3  3  ~/src/tt/debesys/testfile
 -'  1  0  ~/src/tt/debesys/testfile
 -'  8  0  ~/src/tt/debesys/test
@@ -185,80 +309,116 @@ $
 -'  1  0  ~/.my_builds.json
 -'  1  0  /tmp/out
 -'  13  0  /tmp/targets
--'  1  0  /tmp/targets
--'  1  0  ~/src/tt.patch/debesys/deploy/chef/environments/ext-uat-cassandra.rb
--'  1  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/recipes/shared.rb
--'  1  0  /var/log/debesys/md_client_mdsub.log
--'  1  0  ~/src/tt/debesys/ext/src/smds/debesys-md-test/mdsub_test/source/MDSubscriber.h
--'  1  0  ~/src/tt/debesys/ext/src/smds/debesys-md-test/mdsub_test/build.mk
--'  1  0  /var/log/pds_collector.log
--'  14  0  ~/src/tt/debesys/ext/install-scripts/srlabs.sh
--'  2  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/pds_collector/attributes/debesys_repo_hash.rb
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/pds_collector/attributes/debesys_repo_hash.rb
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/pds_collector/files/default/eex-contract-details.csv
--'  1  0  ~/src/sr/tradingtech-smds-4.1.0.3p9/nordic-der.xml
--'  8  5  ~/.gitconfig
--'  1  0  ~/.gitconfig
--'  20  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_espeed/attributes/default.rb
--'  21  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_espeed/attributes/default.rb
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_espeed/attributes/default.rb
--'  1  29  ~/src/tt/debesys/makefile
--'  3  0  ~/src/tt/debesys/makefile
--'  2  0  ~/src/tt/debesys/makefile
--'  14  0  ~/src/tt/debesys/makefile
--'  1  0  ~/src/tt/debesys/ext/install-scripts/srlabs.sh
--'  4285  137  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4284  145  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4283  147  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4282  150  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4281  137  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4280  146  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4279  150  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4310  158  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4309  149  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4308  159  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4307  161  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4306  156  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4305  138  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4304  140  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4303  148  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4302  148  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4301  141  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4300  158  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4299  150  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  4298  148  ~/src/tt/debesys/ext/install-scripts/srlabs.log
--'  20  0  /tmp/build_issue/build.mk
--'  1  0  /tmp/build_issue/build.mk
--'  1  0  ~/cookbooks_to_bumip
--'  1  0  ~/cookbooks
--'  1  21  ~/src/tt.patch/debesys/ext/src/smds/debesys-md-test/mdsub_test/build.mk
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_cme/recipes/cme_1.rb
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_server/recipes/delayed_price_recording.rb
--'  45  0  ~/src/tt/debesys/ttknife
--'  1  0  ~/src/tt/debesys/ttknife
--'  39  9  ~/.my_builds.json
--'  20  0  /tmp/build_issue/build.mk
--'  1  0  /tmp/build_issue/build.mk
--'  1  0  ~/cookbooks_to_bumip
--'  1  0  ~/cookbooks
--'  1  21  ~/src/tt.patch/debesys/ext/src/smds/debesys-md-test/mdsub_test/build.mk
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_cme/recipes/cme_1.rb
--'  1  0  ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_server/recipes/delayed_price_recording.rb
--'  45  0  ~/src/tt/debesys/ttknife
--'  1  0  ~/src/tt/debesys/ttknife
--'  39  9  ~/.my_builds.json
--'  95  9  ~/.my_builds.json
--'  133  9  ~/.my_builds.json
--'  213  9  ~/.my_builds.json
--'  281  9  ~/.my_builds.json
--'  26  0  ~/.my_builds.json
--'  1  0  ~/.my_builds.json
--'  20  0  /tmp/build_issue/build.mk
--'  1  0  /tmp/build_issue/build.mk
--'  1  0  ~/cookbooks_to_bumip
--'  1  0  ~/cookbooks
+-'  97  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+-'  1  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+-'  161  19  ~/md_server.list
+-'  1  0  ~/md_server.list
+-'  54  4  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/Readme.md
+-'  1  0  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/Readme.md
+-'  41  3  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/ps_messages.xml
+-'  1  0  ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/ps_messages.xml
+-'  1  0  ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
+-'  8  0  ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
+-'  4  0  ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
+-'  3  3  ~/src/tt/debesys/testfile
+-'  1  0  ~/src/tt/debesys/testfile
+-'  8  0  ~/src/tt/debesys/test
+-'  1  0  ~/src/tt/debesys/test
+-'  24  0  ~/src/tt/debesys/test
+-'  14  0  ~/src/tt.patch/debesys/test
+-'  8  0  ~/src/tt.patch/debesys/test
+-'  1  0  ~/src/tt.patch/debesys/test
+-'  10  0  ~/bin/find_sr_version
+-'  1  0  ~/bin/find_sr_version
+-'  1  1  ~/src/sr/tradingtech-smds-4.1.0.13p26/env-absolute.sh
+-'  8  0  ~/src/java/jdk-8u91-linux-x64.tar.gz
+-'  32  0  ~/src/tt/debesys/makefile
+-'  32  0  ~/src/tt/debesys/makefile
+-'  32  0  ~/src/tt/debesys/makefile
+-'  1  0  ~/src/tt/debesys/makefile
+-'  14  0  ~/src/tt.patch/debesys/test
+-'  8  0  ~/src/tt.patch/debesys/test
+-'  1  0  ~/src/tt.patch/debesys/test
+-'  10  0  ~/bin/find_sr_version
+-'  1  0  ~/bin/find_sr_version
+-'  1  1  ~/src/sr/tradingtech-smds-4.1.0.13p26/env-absolute.sh
+-'  8  0  ~/src/java/jdk-8u91-linux-x64.tar.gz
+-'  4  0  ~/src/java/jdk-8u91-linux-x64.tar.gz
+-'  1  17  ~/inproc/pds_ndaq_eu_shared.inproc.conf
+-'  97  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+-'  1  0  ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+-'  161  19  ~/md_server.list
 
 # History of marks within files (newest to oldest):
+
+> ~/breakpoints
+	"	1	0
+
+> ~/bin/cleanpds
+	"	35	131
+	.	35	0
+	+	35	0
+
+> ~/.bash_profile
+	"	31	0
+	^	30	7
+	.	30	6
+	+	1	0
+	+	30	6
+
+> ~/.bashpr
+	"	1	0
+
+> ~/.bashrc
+	"	1	0
+
+> ~/src/tt/debesys/price_server/exchange/fa_ps/source/fa_fix_messages.xml
+	"	151	6
+	.	151	0
+	+	151	0
+
+> ~/src/tt/debesys/makefile
+	"	32	0
+
+> ~/bin/find_sr_version
+	"	10	0
+
+> ~/src/tt.clean/debesys/=
+	"	1	0
+
+> ~/src/sr/tradingtech-smds-4.1.0.13p26/env-absolute.sh
+	"	1	1
+
+> ~/src/java/jdk-8u91-linux-x64.tar.gz
+	"	8	0
+	.	5	0
+	+	5	0
+
+> ~/inproc/pds_ndaq_eu_shared.inproc.conf
+	"	1	17
+	^	1	18
+	.	1	17
+	+	1	17
+
+> ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/templates/default/cme-mdp3.sim.connection_shared_3.xml.erb
+	"	97	0
+
+> ~/md_server.list
+	"	161	19
+
+> ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/Readme.md
+	"	54	4
+
+> ~/src/tt.patch/debesys/price_server/ps_common/sbe_messages/ps_messages.xml
+	"	41	3
+	^	41	4
+	.	41	0
+	+	41	0
+
+> ~/tmp/java8/jdk-8u73-linux-x64.tar.gz
+	"	1	0
+	.	5	0
+	+	5	0
 
 > ~/src/tt/debesys/testfile
 	"	3	3
@@ -272,59 +432,3 @@ $
 
 > ~/.chef/knife.rb
 	"	1	0
-
-> /tmp/build_issue/build.mk
-	"	20	0
-	^	19	139
-	.	19	139
-	+	19	139
-
-> ~/cookbooks_to_bumip
-	"	1	0
-
-> ~/cookbooks
-	"	1	0
-
-> ~/src/tt.patch/debesys/ext/src/smds/debesys-md-test/mdsub_test/build.mk
-	"	1	21
-	.	1	21
-	+	1	21
-
-> ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_cme/recipes/cme_1.rb
-	"	1	0
-
-> ~/src/tt.clean/debesys/deploy/chef/cookbooks/md_server/recipes/delayed_price_recording.rb
-	"	1	0
-
-> ~/src/tt/debesys/ttknife
-	"	45	0
-
-> ~/.my_builds.json
-	"	39	9
-
-> /tmp/out
-	"	1	0
-
-> /tmp/targets
-	"	13	0
-
-> ~/src/tt.patch/debesys/deploy/chef/environments/ext-uat-cassandra.rb
-	"	1	0
-
-> ~/src/tt/debesys/deploy/chef/cookbooks/md_cme/recipes/shared.rb
-	"	1	0
-
-> /var/log/debesys/md_client_mdsub.log
-	"	1	0
-
-> ~/src/tt/debesys/ext/src/smds/debesys-md-test/mdsub_test/source/MDSubscriber.h
-	"	1	0
-
-> ~/src/tt/debesys/ext/src/smds/debesys-md-test/mdsub_test/build.mk
-	"	1	0
-
-> /var/log/pds_collector.log
-	"	1	0
-
-> ~/src/tt/debesys/ext/install-scripts/srlabs.sh
-	"	14	0

@@ -198,5 +198,8 @@
 ;;(define-key global-map [(meta f10)] 'cscope-display-buffer-toggle)
 
 
+;; ============================ RUBY ============================
+(setq ruby-insert-encoding-magic-comment nil)
+
 ;; ============================
 ;; End of Options Menu Settings
