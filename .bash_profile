@@ -13,13 +13,8 @@ alias githome='git --work-tree=$HOME --git-dir=$HOME/.home'
 PATH=$PATH:$HOME/bin
 
 export PATH
-
 export EDITOR=/usr/bin/emacs
-
 export INTAD_USER=atabion
-
-export JENKINS_TOKEN=e54f60799e1bb861fd064122e5c12adf
-export JENKINS_USER=anthony.tabion@tradingtechnologies.com
 
 # __gitdir accepts 0 or 1 arguments (i.e., location)
 # returns location of .git repo

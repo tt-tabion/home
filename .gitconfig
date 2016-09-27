@@ -9,8 +9,9 @@
 [alias]
     glog = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
     myglog = log --graph --date-order --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative --author=\"YOUR NAME\"
-    cpu = "!f() { git checkout $1 && git pull && git submodule update; }; f"
-    pu = "!f() { git pull && git submodule update; }; f"
+    cpu = "!f() { git checkout $1 && git pull && git submodule --recursive update; }; f"
+    su = "git submodule update --recurse"
+    pu = "!f() { git pull && git submodule --recurseive update; }; f"
     st = status
     co = checkout
     br = branch
