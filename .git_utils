@@ -1,46 +1,4 @@
-# .bash_profile
-
-# Add new GIT version not statnard to CentOS 6.7
-source /opt/rh/git19/enable
-
-# Get the aliases and functions
-if [ -f ~/.bashrc ]; then
-	. ~/.bashrc
-fi
-
-alias githome='git --work-tree=$HOME --git-dir=$HOME/.home'
-
-# User specific environment and startup programs
-# source /etc/bash_completion.d/git
-
-# go ()
-# {
-#     if [ -z "$1" ]
-#     then
-#         case "$1" in
-
-#         'd')
-#         cd /home/atabion/tt/debesys/
-#         ;;
-
-#         p) cd /home/atabion/tt.patch/debesys/
-#         ;;
-
-#         c) cd /home/atabion/tt.$1
-#         ;;
-
-#         *)
-#         ;;
-#         esac
-#     fi
-# }
-
-
-PATH=$PATH:$HOME/bin
-
-export PATH
-export EDITOR=/usr/bin/emacs
-export INTAD_USER=atabion
+#!/bin/bash
 
 # __gitdir accepts 0 or 1 arguments (i.e., location)
 # returns location of .git repo
@@ -159,4 +117,3 @@ PS1='[\u@\[$green\]\h\[$reset\]:\w\[$red\]$(__git_ps1)\[$reset\]]$ '
 
 # PS1="[\[\033[32m\]\w]\[\033[0m\]\$(__git_ps1)\n\[\033[1;36m\]\u\[\033[32m\]$ \[\033[0m\]"
 # export PS11="[\u@\h \W] $(__git_ps1)"
-
